@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen w-full">
+      <body className="bg-branco font-poppins">
         {children}
       </body>
     </html>
