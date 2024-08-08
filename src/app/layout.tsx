@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-branco font-poppins">
+      <body className="bg-branco font-poppins text-preto">
         {children}
       </body>
     </html>

@@ -26,7 +26,7 @@ const CardTask = ({ idTask }: ITask) => {
             <div className="flex flex-row gap-2">
                 <button className="bg-teal-700 text-violet-100 p-2 rounded-md"><MdModeEditOutline /></button>
                 <button className="bg-teal-700 text-violet-100 p-2 rounded-md"><FaTrash /></button>
-                <button onClick={() => router.push(`/verTask?id=${idTask}`)} className="bg-teal-700 text-violet-100 p-2 rounded-md"><FaCaretRight /></button>
+                <button onClick={() => router.push(`/verTask?id=${idTask}`)} className="bg-teal-700 text-violet-100 p-2 rounded-md"><FaCaretRight className="text-xl"/></button>
             </div>
         </div>
     )
