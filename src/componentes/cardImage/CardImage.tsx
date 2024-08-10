@@ -20,11 +20,15 @@ const CardImage = ({ idFile }: ITask) => {
         });
     }, [])
 
+    const deletarImagem = () => {
+        
+    }
+
     return (
         <div className="flex flex-col items-center p-2">
             <img className="h-24" src={url} />
-            <div className="bg-[#fea345] p-2 w-full justify-center flex">
-                <FaTrash color="#f53421" size={20} />
+            <div className="p-2 w-full justify-center flex">
+                <FaTrash color="#f53421" size={20} onClick={() => deletarImagem()} />
             </div>
         </div>
     )

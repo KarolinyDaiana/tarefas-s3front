@@ -46,6 +46,12 @@ export default function AdicionarTask() {
                     placeholder="Selecione uma imagem" 
                     accept="image/*" 
                     onChange={handleImageChange} 
+                    className="block w-full text-sm text-slate-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-md file:border-2 file:border-solid file:border-teal-900
+                    file:text-sm file:font-semibold
+                    file:bg-transparent file:text-teal-900
+                    hover:file:shadow-sm duration-100"
                 />
 
                 {imagem && <img src={imagem} className="rounded-md border-teal-900 border-2 self-center size-36 bg-cover" alt="Selected" style={{ marginTop: '20px', maxWidth: '100%' }} />}
