@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation'
 import { FaTrash } from "react-icons/fa";
 
 interface ITask {
@@ -21,7 +20,11 @@ const CardImage = ({ idFile }: ITask) => {
     }, [])
 
     const deletarImagem = () => {
-        
+        fetch(`http://localhost:8552/file/${idFile}`, {
+            method: 'DELETE'
+        }).then(res => {
+            return res.json();
+        })
     }
 
     return (
