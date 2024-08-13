@@ -18,7 +18,6 @@ const config: Config = {
         'cinza-claro':'#E8E8E8',
         'cinza': '#BDBDBD',
         'cinza-escuro': '#4F4F4F',
-        'fundo-modal': 'rgba(0, 0, 0, 0.3)',
         'error' : '#E94444',
         'verde': '#37BC2C',
         'azul-hover': '#c4d5f3',

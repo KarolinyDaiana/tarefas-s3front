@@ -18,6 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-branco font-poppins text-preto">
+        <div className='bg-teal-700 w-full p-4 flex flex-row items-center gap-2'>
+          <img className="hover:shadow-cyan-300 hover:shadow-md duration-150 transition-shadow w-12" src="./assets/task.png" />
+          <p className="text-violet-100 text-xl font-extralight">Bem vindo!</p>
+        </div>
         {children}
       </body>
     </html>
