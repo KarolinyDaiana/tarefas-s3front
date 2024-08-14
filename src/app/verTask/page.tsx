@@ -54,6 +54,7 @@ export default function AdicionarTask({ searchParams }: VisualizarPedidoProps) {
         }).then(res => {
             return res.json();
         })
+        back()
     }
 
     const handleImageChange = (e: any) => {
@@ -107,7 +108,7 @@ export default function AdicionarTask({ searchParams }: VisualizarPedidoProps) {
                                 hover:file:shadow-sm duration-100" />
                 </div>
                 <div className="w-full flex flex-row gap-2">
-                    <button onClick={() => excluirTask()} type="button" className="hover:bg-orange-700 hover:text-branco duration-300 border-orange-700 border-2 text-orange-700 p-2 rounded-md w-full">Excluir</button>
+                    <button onClick={() => excluirTask()} type="button" className="hover:bg-orange-700 hover:text-branco duration-300 border-orange-700 border-2 text-orange-700 p-2 rounded-md w-full">Excluir task</button>
                     <button type="submit" className="hover:bg-teal-950 duration-300 bg-teal-700 text-violet-100 p-2 rounded-md w-full">Salvar</button>
                 </div>
             </form>

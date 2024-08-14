@@ -7,10 +7,6 @@ export default function PaginaInicial() {
   const [tarefas, setTarefas] = useState<Object[]>([])
   const [titulo, setTitulo] = useState("")
 
-  useEffect(() => {
-    atualizarTarefas()
-  }, [])
-
   const atualizarTarefas = () => {
     fetch('http://localhost:8552/task').then(res => {
       return res.json()
@@ -20,23 +16,28 @@ export default function PaginaInicial() {
     })
   }
 
+  useEffect(() => {
+    atualizarTarefas()
+  }, [])
+
   const salvarTask = () => {
-    const task = {nome: titulo}
+    const task = { nome: titulo }
     fetch('http://localhost:8552/task/novatask', {
-      method:'POST', 
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(task)  
+      body: JSON.stringify(task)
     })
     setTitulo("")
+    atualizarTarefas()
   }
 
   return (
     <main className="w-[50%] m-auto flex flex-col items-center justify-center h-full gap-4 py-20">
       <h1 className='font-bold text-2xl'>Gerenciador de tarefas</h1>
       <form action={salvarTask} className='flex flex-row gap-2 w-full'>
-        <input 
+        <input
           required
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
