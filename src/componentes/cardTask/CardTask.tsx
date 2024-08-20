@@ -32,7 +32,7 @@ const CardTask = ({ idTask }: ITask) => {
         <div className="border-2 border-teal-900 items-center rounded-md justify-between flex flex-row gap-2 p-2 w-full">
             <p className="w-full">{nome}</p>
             <div className="flex flex-row gap-2">
-                <button onClick={() => deletarTask()} className="bg-orange-700 hover:bg-orange-900 duration-100 text-violet-100 p-2 rounded-md"><FaTrash /></button>
+                <button onClick={() => deletarTask()} className="bg-teal-700 hover:bg-teal-900 duration-100 text-violet-100 p-2 rounded-md"><FaTrash /></button>
                 <button className="bg-teal-700 hover:bg-teal-900 duration-100 text-violet-100 p-2 rounded-md"><MdModeEditOutline /></button>
                 <button onClick={() => router.push(`/verTask?id=${idTask}`)} className="bg-teal-700 hover:bg-teal-900 duration-100 text-violet-100 p-2 rounded-md"><FaCaretRight className="text-xl"/></button>
             </div>
